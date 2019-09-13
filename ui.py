@@ -28,7 +28,8 @@ def show_books(books):
 
     if books:
         for book in books:
-            print(book)
+            ##added \n before and after the book here
+            print("\n",book,"\n")
     else:
         print('No books to display')
 
