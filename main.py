@@ -34,8 +34,17 @@ def create_menu():
 
 
 def add_book():
-    new_book = ui.get_book_info()
-    new_book.save()
+
+      new_book = ui.get_book_info()
+      new_book.save()
+      all_books = store.get_all_books()
+
+      if new_book in all_books:
+          ui.message('The book already exists')
+      else:
+          store.add_book(new_book)
+
+
     
 
 def show_read_books():
