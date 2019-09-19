@@ -80,14 +80,14 @@ def delete_book():
 
 
 def change_read():
-
     try:
-
         book_id = ui.get_book_id()
         book = store.get_book_by_id(book_id)  
         new_read = ui.get_read_value()     
         book.read = new_read 
         book.save()
+
+
     except:
         ui.message('Book not found')
         # Print a confirmation when book  read status is changed
@@ -95,6 +95,10 @@ def change_read():
     
 
 def quit_program():
+    while True:
+        quit_program = input("enter q or Q to quit")
+        if quit_program == 'q' or 'Q':
+            break
     ui.message('Thanks and bye!')
 
 
