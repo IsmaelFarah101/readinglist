@@ -81,7 +81,7 @@ def change_read():
         book.save()
     except:
         ui.message('Book not found')
-
+        # Print a confirmation when book  read status is changed
         print("The book has been read already !")
     
 
