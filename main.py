@@ -96,6 +96,10 @@ def change_read():
 
 def quit_program():
     while True:
+
+        """"
+        Makes quit menu option case insensitive - 'q' or 'Q' should quit the program
+        """
         quit_program = input("enter q or Q to quit")
         if quit_program == 'q' or 'Q':
             break
