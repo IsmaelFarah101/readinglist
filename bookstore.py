@@ -84,7 +84,7 @@ class BookStore:
             
             insert_sql = 'INSERT INTO books (title, author, read) VALUES (?, ?, ?)'
 
-            try: 
+            try:
                 with sqlite3.connect(db) as con:
                     res = con.execute(insert_sql, (book.title, book.author, book.read) )
                     new_id = res.lastrowid  # Get the ID of the new row in the table 
@@ -94,7 +94,6 @@ class BookStore:
             finally:
                 con.close()
 
-            
         def delete_book(self, book):
             """ Removes book from store. Raises BookError if book not in store. 
             :param book the Book to delete """
