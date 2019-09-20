@@ -58,9 +58,9 @@ def search_book():
     matches = store.book_search(search_term)
     ui.show_books(matches)
 
- fix_crash
+
 ##added try catch block if error occurs when trying to change read status of book
-=======
+
 
 ##Added Delete book function here
 def delete_book():
@@ -69,7 +69,7 @@ def delete_book():
     store.delete_book(book)
     ui.message('Book Deleted')
 
- master
+
 def change_read():
      try:
         book_id = ui.get_book_id()
@@ -77,7 +77,8 @@ def change_read():
         new_read = ui.get_read_value()     
         book.read = new_read 
         book.save()
-    except:
+        print('It has been changed !')
+     except:
         ui.message('Book not found')
 
     
