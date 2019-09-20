@@ -89,6 +89,9 @@ def change_read():
     
 
 def quit_program():
+    quit_program = input("enter q or Q to quit")
+    if quit_program == 'q' or 'Q':
+         break
     ui.message('Thanks and bye!')
 
 
